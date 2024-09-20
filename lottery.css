@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/lottery.jpg);
+    position: relative;
+}
+.head {
+    height: 4.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 6vw 2vh 2vw; /* Responsive padding */
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.578);
+}
+
+.head h1 {
+    font: 35px bold;
+    color: rgb(255, 255, 255);
+    padding: 5vw;
+    cursor: pointer;
+}
+
+.head a {
+    text-decoration: none;
+}
+
+/* Navigation Links */
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+#nav-links h4 {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 5px;
+    position: relative;
+    transition: all 0.3s ease; /* add this for smooth transition */
+}
+
+#nav-links h4 a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+#nav-links h4::after {
+    width: 100%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: -40%;
+    left: -100%;
+    right: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#nav-links h4:hover::after {
+    left: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.title{
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+}
+.title h1{
+    font: 50px bold italic;
+    font-weight:500;
+}
+.scrolling {
+    overflow-x: hidden; /* hide horizontal scrollbar */
+    background-color: rgb(255, 255, 255);
+}
+
+.scrolling p {
+    font-size: 6vw;
+    white-space: nowrap;
+    margin: 50px 0px 20px 100px;
+    transform: translateX(100vw); /* initial position: fully to the right */
+    animation: scroll 20s linear infinite; /* animate scrolling */
+}
+
+@keyframes scroll {
+    100% {
+      transform: translateX(-500vw); /* final position: fully to the left */
+    }
+}
+
+.page2{
+    width: 100%;
+   
+}
+.image img{
+    width: 300px;
+    height: 230px;
+}
+.image-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0px 0px 10px 0px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+.image-container h1{
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+.input-box input{
+    width: 93.5%;
+    height: 30px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 767px){
+
+    .page1{
+       background-size: 200vw 150vw;
+        background-position: center ;
+        background-repeat: no-repeat;
+    }
+    .head {
+        width: 100%;
+        height: 63px; /* Reduce header height on mobile */
+        padding: 2vh 4vw 2vh 2vw; /* Adjust padding on mobile */
+    }
+
+    .head h1 {
+        display: flex;
+        align-items: center;
+        font-size: 22px; /* Reduce font size on mobile */
+        margin-left: 8px; /* Adjust margin on mobile */
+    }
+
+    /* Navigation Links */
+    #nav-links {
+        gap: 15px; /* Adjust gap on mobile */
+    }
+
+    #nav-links h4 {
+        padding: 0px 0px 1px 0px;
+        font-size: 15px; /* Reduce font size on mobile */
+        margin-right: 10px;
+    }
+    #nav-links h4::after{
+        width: 100;
+        height: 1px;
+    }
+    .title h1{
+        font: 35px bold black;
+        font-weight: 1000;
+        color: rgb(0, 0, 0);
+        
+    }
+    .title{
+        bottom: 30px;
+    }
+
+    .page2{
+        flex-direction: column;
+        max-height: 1000vw;
+    }
+}
+
+

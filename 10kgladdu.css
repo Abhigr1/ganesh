@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.page1{
+    width: 100%;
+    height: 90vh;
+    background: url(images/10kgladdu2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.head {
+    height: 4.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 6vw 2vh 2vw; /* Responsive padding */
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 2px 2px 12px rgba(16, 158, 214, 0.578);
+}
+
+.head h1 {
+    font: 35px bold;
+    color: rgb(255, 255, 255);
+    padding: 5vw;
+    cursor: pointer;
+}
+
+.head a {
+    text-decoration: none;
+}
+
+/* Navigation Links */
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+#nav-links h4 {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 5px;
+    position: relative;
+    transition: all 0.3s ease; /* add this for smooth transition */
+}
+
+#nav-links h4 a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+#nav-links h4::after {
+    width: 100%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: -40%;
+    left: -100%;
+    right: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#nav-links h4:hover::after {
+    left: 0;
+    background-color: rgb(255, 255, 255);
+}
+.content{
+    position: absolute;
+    top: 30%;
+    left: 8vh;
+}
+.content h1{
+    font: 50px solid cursive;
+    font-weight: 500;
+}
+.content p{
+    margin-top: 10px;
+    font: 19px solid cursive;
+    text-align: right;
+}
+form{
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.812);
+    position: absolute;
+    top: 21%;
+    right: 17vh;
+    border-radius: 16px;
+    box-shadow: 10px 10px 20px black;
+}
+form .input-box input{
+    width: 45vh;
+    height: 7vh;
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+    
+}
+.activalottery {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+    font: 18px solid cursive;
+}
+.submit button{
+    width: 45vh;
+    height: 7vh;
+    color: white;
+    background-color: #1877F2;
+    border: none;
+    border-radius: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer .socialmedia a {
+    color: white;
+    margin-right: 3px;
+    cursor: pointer;
+}
+/* Add this media query to the end of your CSS file */
+
+@media only screen and (max-width: 768px) {
+    
+    /* Body styles */
+    .page1 {
+        background-size: 70% 80vh; /* adjust background image size for mobile */
+        background-position: 1px 60px;
+        background-size: 400px;
+    }
+    
+    .head {
+        width: 100%;
+        height: 63px; /* Reduce header height on mobile */
+        padding: 2vh 4vw 2vh 2vw; /* Adjust padding on mobile */
+    }
+
+    .head h1 {
+        display: flex;
+        align-items: center;
+        font-size: 22px; /* Reduce font size on mobile */
+        margin-left: 8px; /* Adjust margin on mobile */
+    }
+
+    /* Navigation Links */
+    #nav-links {
+        gap: 15px; /* Adjust gap on mobile */
+    }
+
+    #nav-links h4 {
+        padding: 0px 0px 1px 0px;
+        font-size: 15px; /* Reduce font size on mobile */
+        margin-right: 10px;
+    }
+    #nav-links h4::after{
+        width: 100;
+        height: 1px;
+    }
+
+
+    /* Content styles */
+    .content {
+      top: 42%; /* adjust position for mobile */
+      left: 3vh; /* adjust position for mobile */
+    }
+    
+    .content h1 {
+      font-size: 40px; /* reduce font size for mobile */
+      white-space: nowrap;
+    }
+    
+    .content p {
+      font-size: 18px; /* reduce font size for mobile */
+      text-align:center; /* adjust text alignment for mobile */
+    }
+    
+    /* Form styles */
+    form {
+      padding: 25px; /* reduce padding for mobile */
+      top: 56%; /* adjust position for mobile */
+      right: 5vh; /* adjust position for mobile */
+    }
+    
+    form .input-box input {
+      width: 30vh; /* reduce input width for mobile */
+      height: 5vh; /* reduce input height for mobile */
+    }
+    
+    .activalettery {
+      font-size: 14px; /* reduce font size for mobile */
+    }
+    
+    .submit button {
+      width: 30vh; /* reduce button width for mobile */
+      height: 5vh; /* reduce button height for mobile */
+    }
+    footer {
+        height: 12vh; /* Adjust height on mobile */
+        font-size: 15px; /* Reduce font size on mobile */
+    }
+
+    footer .socialmedia a {
+        margin-right: 5px; /* Adjust margin right on mobile */
+    }
+    footer p{
+        margin-top: 6px;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}

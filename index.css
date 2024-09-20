@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header Styles */
+.head {
+    height: 4.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 6vw 2vh 2vw; /* Responsive padding */
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 2px 2px 12px rgba(16, 158, 214, 0.578);
+}
+
+.head h1 {
+    font: 35px bold;
+    color: rgb(255, 255, 255);
+    padding: 5vw;
+    cursor: pointer;
+}
+
+.head a {
+    text-decoration: none;
+}
+/* Navigation Links */
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+#nav-links h4 {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 5px;
+    position: relative;
+    transition: all 0.3s ease; /* add this for smooth transition */
+}
+
+#nav-links h4 a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+#nav-links h4::after {
+    width: 100%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: -40%;
+    left: -100%;
+    right: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#nav-links h4:hover::after {
+    left: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Search Bar */
+/* #searchbar input {
+    width: 35vh; 
+    height: 6vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#searchbar button {
+    padding: 7.5px 20px;
+    margin-left:  5px;
+    margin-top: 7px;
+    font-size: 13px;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(10, 173, 213);
+    border-radius: 6px;
+    transition: all ease 0.3s;
+    z-index: 9;
+}
+
+#searchbar button:hover {
+    background-color: rgba(54, 54, 222, 0.916);
+    color: white;
+} */
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Full width */
+}
+
+/* Single Slide */
+.slide {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height */
+    position: relative;
+}
+
+/* Image */
+.slide img {
+    width: 100%; /* Full width */
+    height: 77vh; /* Maintain aspect ratio */
+    padding: 2vh 5vw; /* Responsive padding */
+    border-radius: 12vh;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 18px;
+    left: 70px;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 5px
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: rgba(39, 159, 228, 0.97);
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 120px;
+}
+
+.next {
+    right: 120px;
+}
+
+/* Dots Navigation */
+.dot-container {
+    text-align: center;
+    box-shadow: 10px 10px 12px black;
+
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 6px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Lottery Heading */
+.ganeshlottery {
+    text-align: center;
+    font: 45px bold cursive;
+    margin-top: 40px;
+    font-weight: 100;
+}
+p{
+    text-align: center;
+    margin-top: 6px;
+    font: 18px Montserrat;
+}
+
+/* Page 2 Styles */
+.page2 {
+    width: 100%;
+    height: 70vh;
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
+}
+
+.image {
+    padding: 0px 0px 15px 0px;
+    background-color: rgba(135, 107, 29, 0.247);
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 280px;/* Maximum width for larger screens */
+}
+
+/* Image Content */
+.image .content {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.image .content button {
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 17px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.968);
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    height: 15vh;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+footer .socialmedia a {
+    color: white;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+/* Mobile Mode Styles */
+
+@media only screen and (max-width: 767px) {
+    /* Header Styles */
+    .head {
+        width: 100%;
+        height: 63px; /* Reduce header height on mobile */
+        padding: 2vh 4vw 2vh 2vw; /* Adjust padding on mobile */
+    }
+
+    .head h1 {
+        display: flex;
+        align-items: center;
+        font-size: 22px; /* Reduce font size on mobile */
+        margin-left: 8px; /* Adjust margin on mobile */
+    }
+
+    /* Navigation Links */
+    #nav-links {
+        gap: 15px; /* Adjust gap on mobile */
+    }
+
+    #nav-links h4 {
+        padding: 0px 0px 1px 0px;
+        font-size: 15px; /* Reduce font size on mobile */
+        margin-right: 10px;
+    }
+    #nav-links h4::after{
+        width: 100;
+        height: 1px;
+    }
+
+    /* Slider Container */
+    .slider-container {
+        max-width: 90%; /* Adjust max-width on mobile */
+        margin: 20px auto; /* Adjust margin on mobile */
+    }
+
+    /* Slides */
+    .slides {
+        flex-direction: column; /* Stack slides on mobile */
+    }
+
+    /* Single Slide */
+    .slide {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height on mobile */
+    }
+
+    /* Image */
+    .slide img {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio on mobile */
+        padding: 1vh 2vw; /* Adjust padding on mobile */
+        border-radius: 20px; /* Adjust border radius on mobile */
+    }
+
+    /* Caption */
+    .caption {
+        bottom: 10px; /* Adjust bottom position on mobile */
+        left: 10px; /* Adjust left position on mobile */
+        font-size: 12px; /* Reduce font size on mobile */
+    }
+
+    /* Navigation Arrows */
+    .prev, .next {
+                /* Adjust padding on mobile */
+        font-size: 20px; /* Reduce font size on mobile */
+    }
+    .prev{
+        left: 20px;
+    }
+    .next{
+        right: 20px;
+    }
+    /* Dots Navigation */
+    .dot-container {
+        margin-top: 10px; /* Adjust margin top on mobile */
+    }
+
+    .dot {
+        height: 10px; /* Reduce height on mobile */
+        width: 10px; /* Reduce width on mobile */
+        margin: 4px 2px; /* Adjust margin on mobile */
+    }
+
+    /* Lottery Heading */
+    .ganeshlottery {
+        font-size: 35px; /* Reduce font size on mobile */
+        margin-top: 30px; /* Adjust margin top on mobile */
+    }
+    p{
+        font:14px solid;
+    }
+
+    /* Page 2 Styles */
+    .page2 {
+        width: 100%; /* Full width on mobile */
+        height: 90vh; /* Adjust max-height on mobile */
+    }
+
+    /* Image Container */
+    .image-container {
+        margin-top: 30px; /* Adjust margin top on mobile */
+        gap: 21px; /* Adjust gap on mobile */
+    }
+
+    .image {
+        padding: 0px 0px 10px 0px; /* Adjust padding on mobile */
+    }
+
+    .image img {
+        max-width: 200px; /* Adjust max-width on mobile */
+    }
+
+    /* Image Content */
+    .image .content {
+        font-size: 11px; /* Reduce font size on mobile */
+    }
+
+    .image .content button {
+        padding: 6px; /* Adjust padding on mobile */
+        font-size: 10px; /* Reduce font size on mobile */
+    }
+
+    /* Footer Styles */
+    footer {
+        height: 10vh; /* Adjust height on mobile */
+        font-size: 15px; /* Reduce font size on mobile */
+        margin-top: 190px;
+    }
+
+    footer .socialmedia a {
+        margin-right: 5px; /* Adjust margin right on mobile */
+    }
+    footer p{
+        margin-top: 6px;
+    }
+}
